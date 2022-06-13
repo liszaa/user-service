@@ -1,19 +1,18 @@
 package lizsa.userservice.repository;
 
+import lizsa.userservice.UserServiceApplicationTests;
 import lizsa.userservice.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 
 import javax.annotation.PostConstruct;
 
 
 @Slf4j
-@SpringBootTest
-class UserRepositoryImplTest {
+class UserRepositoryImplTest extends UserServiceApplicationTests {
 
     @Autowired
     UserRepositoryImpl repository;
