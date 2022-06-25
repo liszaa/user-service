@@ -1,0 +1,17 @@
+// нужно создать сервис, который описывает методы grpc
+// то, что принимают методы и отдают
+// принимать метод будет имя юзера (стринг)
+// а возвращать будет юзера
+syntax = "proto3";
+option java_package = "lizsa.userservice.proto";
+option java_multiple_files = true;
+import "google/protobuf/wrappers.proto";
+
+message GrpcUser {
+  int64 id = 1;
+  string name = 2;
+}
+
+service UserService {
+  rpc getUser(google.protobuf.StringValue) returns (GrpcUser) {};
+}
